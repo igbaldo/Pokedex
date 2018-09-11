@@ -7,15 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
-	<header>
-		<h1>Pokedesk</h1>
-	</header>
 	<main>
+		<h1>Pokedex</h1>
 		<article class="formulario">
 			<form action="pokedex.php" method="post">
 				<div class="form-group">
 					<label>Ingrese un Pokemón:</label>
-					<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="whoisthat" id="nombre" required>
+					<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="nombreBuscado" id="nombre" required>
 				</div>
 				<button type="submit" class="btn btn-primary">Buscar</button>
 			</form>

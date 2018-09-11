@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/estiloPokedesk.css">
+	<link rel="stylesheet" type="text/css" href="css/estiloPokedex.css">
 	<title>Example</title>
 </head>
 <body>
@@ -14,7 +14,6 @@
 			'generoimagen' => "<img class='imagenes2' src='https://png.icons8.com/metro/1600/male.png'>",
 
 			'ataque'=>'Fuego Fatuo',
-
 
 			'foto'=>"<img class='imagenes4' src='https://vignette.wikia.nocookie.net/es.pokemon/images/b/be/Charmander_%28anime_SO%29.png/revision/latest?cb=20120906002506'>",
 
@@ -40,14 +39,13 @@
 
 			'ataque'=>'Látigo Cepa',
 
-
 			'foto'=>"<img class='imagenes4' src='https://vignette.wikia.nocookie.net/pokemon-planet/images/5/5b/Bulbasaur_by_elfaceitoso.png/revision/latest?cb=20161115042430'>",
 
 			'fotoespecifica'=>"<img class='imagenes3' src='https://vignette.wikia.nocookie.net/pokemon-planet/images/5/5b/Bulbasaur_by_elfaceitoso.png/revision/latest?cb=20161115042430'>"));
 
-		if (isset($_POST["whoisthat"])) 
+		if (isset($_POST["nombreBuscado"])) 
 		{
-			$buscado= $_POST["whoisthat"];
+			$buscado= $_POST["nombreBuscado"];
 			$buscado= strtolower($buscado);
 			$buscado= ucfirst($buscado);
 
@@ -74,17 +72,16 @@
 	}
 	else
 	{
-		Todos ($pokemons);
+		listarTodos($pokemons);
 	}
 }  
-
 else
 {
-	Todos ($pokemons);
+	listarTodos($pokemons);
 }
 
 
-Function Todos ($pokemons){
+Function listarTodos($pokemons){
 	foreach ($pokemons as $filanombre => $contenido) 
 	{	
 
